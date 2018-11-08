@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
       <Button path="/resources" className="resources">
         Resoruces
       </Button>
-      <Button>Another link</Button>
+      <Button path="/something">Another link</Button>
     </div>
   </div>
 )

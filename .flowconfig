@@ -1,5 +1,6 @@
 [ignore]
-.src/assets
+./src/assets
+./node_modules
 [include]
 
 [libs]

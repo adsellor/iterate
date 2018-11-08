@@ -16,6 +16,14 @@ module.exports = {
     'gatsby-plugin-sass',
     'gatsby-plugin-flow',
     {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        src: `${__dirname}/src`,
+        pages: `${__dirname}/src/pages`,
+        components: `${__dirname}/src/components`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'iterate',
