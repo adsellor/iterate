@@ -1,12 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+/* @flow */
+
+import * as React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import '../assets/layout.scss'
 
-const Layout = ({ children }) => (
+type LayoutProps = {
+  children: React.Node,
+}
+
+const Layout = ({ children }: LayoutProps) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -22,7 +27,10 @@ const Layout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'iterate hackerspace official website' },
+            {
+              name: 'description',
+              content: 'iterate hackerspace official website',
+            },
             { name: 'keywords', content: 'iterate, hackerspace' },
           ]}
         >
@@ -43,9 +51,5 @@ const Layout = ({ children }) => (
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

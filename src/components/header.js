@@ -19,7 +19,9 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <Button>Link</Button>
+      <Button path="/resources" className="resources">
+        Resoruces
+      </Button>
       <Button>Another link</Button>
     </div>
   </div>

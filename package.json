@@ -28,9 +28,11 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
+    "flow": "flow",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "flow-bin": "^0.85.0",
     "prettier": "^1.14.2"
   },
   "repository": {
