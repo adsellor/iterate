@@ -1,6 +1,9 @@
 .header-wrapper {
   background: rebeccapurple;
   margin-bottom: 1.45rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   .header-container {
     max-width: 960px;
     display: grid;
