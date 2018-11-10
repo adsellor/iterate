@@ -4,8 +4,10 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Iterate
 </h1>
+
+[![Build Status](https://travis-ci.org/adsellor/iterate.svg?branch=dev)](https://travis-ci.org/adsellor/iterate)
 
 Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
 
@@ -13,13 +15,13 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+1.  **Clone  this repo.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
+    
     ```sh
-    # create a new Gatsby site using the default starter
-    npx gatsby new my-default-starter
+    git clone https://github.com/adsellor/iterate.git
+    # or use ssh
+    git clone git@github.com:adsellor/iterate.git
     ```
 
 1.  **Start developing.**
@@ -27,7 +29,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-default-starter/
+    cd iterate/
     gatsby develop
     ```
 
@@ -52,11 +54,12 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── gatsby-config.js
     ├── gatsby-node.js
     ├── gatsby-ssr.js
+    ├── jest-preprocess.js
+    ├── jest.config.js
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
-    ├── README.md
-    └── yarn.lock
+    └── README.md
 
   1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.  
   
@@ -74,15 +77,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
   
   8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
   
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+  9. **`jest.config.js`**: This is a configuration file for [Jest](https://jestjs.io/en/) - JavaScript testing library. See [Configuring Jest](https://jestjs.io/docs/en/configuration.html) for more information.
+
+  10.  **`LICENSE`**: Gatsby is licensed under the MIT license.
   
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+  11.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
   
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+  12.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
   
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
+  13.  **`README.md`**: A text file containing useful reference information about your project.
 
 ## 🎓 Learning Gatsby
 
