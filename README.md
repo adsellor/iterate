@@ -8,6 +8,7 @@
 </h1>
 
 [![Build Status](https://travis-ci.org/adsellor/iterate.svg?branch=dev)](https://travis-ci.org/adsellor/iterate)
+![](./coverage/badge-branches.svg)
 
 Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
 
