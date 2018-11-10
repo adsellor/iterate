@@ -3,7 +3,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import '../assets/button.scss'
+import '../styles/components/button.scss'
 
 type ButtonProps = {
   path: string,

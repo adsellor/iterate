@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import Button from './button'
 
-import '../assets/header.scss'
+import '../styles/layout/header.scss'
 
 const Header = ({ siteTitle }) => (
   <div className="header-wrapper">
