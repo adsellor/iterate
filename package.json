@@ -29,7 +29,7 @@
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "flow": "flow",
-    "test": "jest"
+    "test": "jest --coverage && jest-coverage-badges" 
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",
