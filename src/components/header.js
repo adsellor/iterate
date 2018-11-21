@@ -1,26 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Button from './button'
+import Image from './image'
+// import Button from './button'
+
+import 'styles/components/header.scss'
 
 const Header = ({ siteTitle }) => (
   <div className="header-wrapper">
     <div className="header-container">
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-      <Button path="/resources" className="resources">
-        Resoruces
-      </Button>
-      <Button path="/something">Another link</Button>
+      <Image />
     </div>
   </div>
 )

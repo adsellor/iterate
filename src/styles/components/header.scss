@@ -1,0 +1,16 @@
+.header-wrapper {
+  background: rebeccapurple;
+  margin-bottom: 1.45rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: gray;
+  display: flex;
+  .header-container {
+    width: 300px;
+  }
+
+  .resources {
+    margin-left: auto;
+  }
+}

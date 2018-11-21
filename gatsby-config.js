@@ -21,6 +21,7 @@ module.exports = {
         src: `${__dirname}/src`,
         pages: `${__dirname}/src/pages`,
         components: `${__dirname}/src/components`,
+        styles: `${__dirname}/src/styles`,
       },
     },
     {
