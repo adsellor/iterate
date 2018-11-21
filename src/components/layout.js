@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import  '../assets/layout.scss'
 
 type LayoutProps = {
   children: React.Node,
