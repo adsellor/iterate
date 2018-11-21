@@ -3,9 +3,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import 'styles/components/button.scss'
+import '../styles/components/button.scss'
 
-const Button = props => (
+type ButtonProps = {
+  className: string,
+  path: string,
+  children: any,
+}
+
+const Button = (props: ButtonProps) => (
   <div className={props.className}>
     <Link className="button" to={props.path}>
       {props.children}
