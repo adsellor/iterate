@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://iteratehackerspace.com">
-    <img alt="Gatsby" src="./src/images/logo.svg"
+  <a href="http://iteratehackerspace.com">
+    <img alt="Iterate logo" src="./src/images/logo.svg"
     width="180" />
   </a>
 </p>
