@@ -1,7 +1,7 @@
 <p align="center">
   <a href="http://iteratehackerspace.com">
     <img alt="Iterate logo" src="./src/images/logo.svg"
-    width="180" />
+    />
   </a>
 </p>
 <h1 align="center">
