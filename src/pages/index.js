@@ -5,6 +5,10 @@ import Layout from 'components/layout'
 // import Image from 'components/image'
 import Header from 'components/header'
 
+import '../styles/main.scss'
+
+import '../styles/main.scss'
+
 const IndexPage = () => (
   <Layout>
     <Header />
