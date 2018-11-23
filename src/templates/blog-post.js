@@ -4,10 +4,12 @@ import { graphql } from 'gatsby'
 
 function BlogPostTemplate({ data }) {
   const { markdownRemark: blogPost } = data
+  console.log(blogPost)
   return (
     <div>
       <h1>{blogPost.frontmatter.title}</h1>
-      <p>{blogPost.frontmatter.author}</p>
+      <h2>{blogPost.frontmatter.author}</h2>
+      {blogPost.html}
     </div>
   )
 }

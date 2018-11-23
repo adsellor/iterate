@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => (
           }
         }
       }
-    `}  
+    `}
     render={data => (
       <>
         <Helmet
@@ -28,10 +28,15 @@ const Layout = ({ children }: LayoutProps) => (
               name: 'description',
               content: 'iterate hackerspace official website',
             },
+
             { name: 'keywords', content: 'iterate, hackerspace' },
           ]}
         >
           <html lang="en" />
+          <link
+            rel="shortcut icon"
+            href="http://sstatic.net/stackoverflow/img/favicon.ico"
+          />
         </Helmet>
         <div
           style={{

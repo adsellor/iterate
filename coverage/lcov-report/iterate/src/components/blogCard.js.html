@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for iterate/src/components/button.js</title>
+    <title>Code coverage report for iterate/src/components/blogCard.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../index.html">All files</a> / <a href="index.html">iterate/src/components</a> button.js
+      <a href="../../../index.html">All files</a> / <a href="index.html">iterate/src/components</a> blogCard.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -76,10 +76,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -90,25 +90,25 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* @flow */
 &nbsp;
 import React from 'react'
-import { Link } from 'gatsby'
 &nbsp;
-import '../styles/components/button.scss'
+import '../styles/components/blogCard.scss'
 &nbsp;
-type ButtonProps = {
-  className: string,
-  path: string,
-  children: any,
+type BlogPostCardProps = {
+  img: string,
+  title: string,
+  priview: string,
 }
-&nbsp;
-const Button = (props: ButtonProps) =&gt; (
-  &lt;div className={props.className}&gt;
-    &lt;Link className="button" to={props.path}&gt;
-      {props.children}
-    &lt;/Link&gt;
+const BlogPostCard = (props: BlogPostCardProps) =&gt; (
+  &lt;div className="card-wrapper"&gt;
+    &lt;img className="image" src={props.src} /&gt;
+    &lt;div className="card-content"&gt;
+      &lt;p className="article-title"&gt;{props.title}&lt;/p&gt;
+      &lt;p className="article-preview"&gt;{props.preview}&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 )
 &nbsp;
-export default Button
+export default BlogPostCard
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

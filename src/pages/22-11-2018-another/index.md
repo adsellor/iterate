@@ -1,5 +1,5 @@
 ---
-path: '/test-post'
+path: '/post'
 title: 'Test post'
 author: 'No one'
 date: '21.11.18'
