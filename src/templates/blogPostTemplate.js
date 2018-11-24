@@ -1,15 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 // import Helmet from 'react-helmet'
-
-function BlogPostTemplate({ data }) {
+import Markdown from 'markdown-to-jsx'
+const BlogPostTemplate = ({ data }) => {
   const { markdownRemark: blogPost } = data
-  console.log(blogPost)
   return (
     <div>
-      <h1>{blogPost.frontmatter.title}</h1>
-      <h2>{blogPost.frontmatter.author}</h2>
-      {blogPost.html}
+      <h3>title: {blogPost.frontmatter.title}</h3>
+      <h4>author: {blogPost.frontmatter.author}</h4>
+      <Markdown>{blogPost.rawMarkdownBody}</Markdown>
     </div>
   )
 }
@@ -17,7 +16,7 @@ function BlogPostTemplate({ data }) {
 export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+      rawMarkdownBody
       frontmatter {
         path
         title

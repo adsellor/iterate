@@ -1,22 +1,25 @@
 /* @flow */
 
 import React from 'react'
+import { Link } from 'gatsby'
 
 import '../styles/components/blogCard.scss'
 
 type BlogPostCardProps = {
   src: string,
   title: string,
-  preview: string,
+  excerpt: string,
+  onClick: Function,
+  path: string,
 }
 const BlogPostCard = (props: BlogPostCardProps) => (
-  <div className="card-wrapper">
+  <Link to={props.path} onClick={props.onClick} className="card-wrapper">
     <img alt="article" className="image" src={props.src} />
     <div className="card-content">
       <p className="article-title">{props.title}</p>
-      <p className="article-preview">{props.preview}</p>
+      <p className="article-excerpt">{props.excerpt}</p>
     </div>
-  </div>
+  </Link>
 )
 
 export default BlogPostCard

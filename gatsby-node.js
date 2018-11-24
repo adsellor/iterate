@@ -4,14 +4,14 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
   console.log(actions)
 
-  const postTemplate = path.resolve('src/templates/blog-post.js')
+  const postTemplate = path.resolve('src/templates/blogPostTemplate.js')
 
   return graphql(`
     {
       allMarkdownRemark {
         edges {
           node {
-            html
+            rawMarkdownBody
             id
             frontmatter {
               path

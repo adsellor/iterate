@@ -1,7 +1,6 @@
 .card-wrapper {
   display: grid;
   margin: 1em;
-  border: 1px solid gray;
   border-radius: 0.5em;
   box-shadow: 2px 2px 2px gray;
   .image {
@@ -15,7 +14,7 @@
       font-size: 20px;
       font-weight: 600;
     }
-    .article-preview {
+    .article-excerpt {
       font-size: 16px;
       font-weight: 400;
     }
