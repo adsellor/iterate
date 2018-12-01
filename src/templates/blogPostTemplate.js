@@ -2,14 +2,19 @@ import React from 'react'
 import { graphql } from 'gatsby'
 // import Helmet from 'react-helmet'
 import Markdown from 'markdown-to-jsx'
+
+import '../styles/base/blogpost-template.scss'
+
 const BlogPostTemplate = ({ data }) => {
   const { markdownRemark: blogPost } = data
   return (
-    <div>
-      <h3>title: {blogPost.frontmatter.title}</h3>
-      <h4>author: {blogPost.frontmatter.author}</h4>
+    <>
+      <div className="article-meta">
+        <p>{blogPost.frontmatter.author}</p>
+        <p className="title">{blogPost.frontmatter.title}</p>
+      </div>
       <Markdown>{blogPost.rawMarkdownBody}</Markdown>
-    </div>
+    </>
   )
 }
 

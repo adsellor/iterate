@@ -1,0 +1,10 @@
+.article-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .title {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
