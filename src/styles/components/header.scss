@@ -1,11 +1,18 @@
+@import "../abstracts/mixins";
+
 .header-wrapper {
-  background: rebeccapurple;
   margin-bottom: 1.45rem;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: gray;
   display: flex;
+
+  @include for-size(phone-only) {
+    background-color: red;
+    margin: 10rem;
+  }
+  
   .header-container {
     width: 500px;
   }
