@@ -50,3 +50,4 @@ const BlogPosts = () => (
   />
 )
 export default BlogPosts
+export { MappedPosts }
