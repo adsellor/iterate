@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Modal from '../../components/signinModal'
+import Modal from '../../components/modal'
 
 describe('Modal', () => {
   let isVisible
