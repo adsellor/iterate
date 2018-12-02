@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>4/6</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/3</span>
+        <span class='fraction'>1/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>0/8</span>
+        <span class='fraction'>4/6</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line medium'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -80,11 +80,7 @@
 35
 36
 37
-38
-39</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+38</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -93,7 +89,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -105,24 +103,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* @flow */
-<span class="cstat-no" title="statement not covered" >import { initializeApp, auth } from 'firebase'</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { initializeApp, auth } from 'firebase'
 &nbsp;
-<span class="cstat-no" title="statement not covered" >import config from 'gatsby-plugin-config'</span>
+import config from 'gatsby-plugin-config'
 &nbsp;
 // You will need to have a .env file in the
 // root of your project with the GATSBY_API_KEY in it.
@@ -131,7 +128,7 @@
 // to access from the client side add GATSBY_ prefix to variable
 // https://www.gatsbyjs.org/packages/gatsby-plugin-config/?=dotenv
 &nbsp;
-const firebaseConfig = <span class="cstat-no" title="statement not covered" >{</span>
+const firebaseConfig = {
   apiKey: config.API_KEY,
   authDomain: 'iterate-4741d.firebaseapp.com',
   databaseURL: 'https://iterate-4741d.firebaseio.com',
@@ -141,17 +138,17 @@ const firebaseConfig = <span class="cstat-no" title="statement not covered" >{</
 }
 &nbsp;
 // refactor with simple seperate functions
-&nbsp;
 class Firebase {
-<span class="fstat-no" title="function not covered" >  constructor</span>() {
-<span class="cstat-no" title="statement not covered" >    initializeApp(firebaseConfig)</span>
-<span class="cstat-no" title="statement not covered" >    this.googleProvider = new auth.GoogleAuthProvider()</span>
-<span class="cstat-no" title="statement not covered" >    this.githubProvider = new auth.GithubAuthProvider()</span>
+  constructor() {
+    initializeApp(firebaseConfig)
+    this.googleProvider = new auth.GoogleAuthProvider()
+    this.githubProvider = new auth.GithubAuthProvider()
   }
-<span class="fstat-no" title="function not covered" >  signInWithGoogle</span>() {
+&nbsp;
+<span class="fstat-no" title="function not covered" >  si</span>gnInWithGoogle() {
 <span class="cstat-no" title="statement not covered" >    auth().signInWithPopup(this.googleProvider)</span>
   }
-<span class="fstat-no" title="function not covered" >  signInWithGithub</span>() {
+<span class="fstat-no" title="function not covered" >  si</span>gnInWithGithub() {
 <span class="cstat-no" title="statement not covered" >    auth().signInWithPopup(this.githubProvider)</span>
   }
 }
@@ -163,7 +160,7 @@ export default Firebase
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 02 2018 03:45:00 GMT+0400 (Armenia Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Dec 02 2018 07:36:03 GMT+0400 (Armenia Standard Time)
 </div>
 </div>
 <script src="../prettify.js"></script>

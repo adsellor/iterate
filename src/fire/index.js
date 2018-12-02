@@ -1,4 +1,3 @@
-/* @flow */
 import { initializeApp, auth } from 'firebase'
 
 import config from 'gatsby-plugin-config'
@@ -20,15 +19,7 @@ const firebaseConfig = {
 }
 
 // refactor with simple seperate functions
-
-interface IFirebase {
-  signInWithGoogle(): void;
-  signInWithGithub(): void;
-  googleProvider?: typeof undefined | auth.GoogleAuthProvider;
-  githubProvider?: typeof undefined | auth.GithubAuthProvider;
-}
-
-class Firebase implements IFirebase {
+class Firebase {
   constructor() {
     initializeApp(firebaseConfig)
     this.googleProvider = new auth.GoogleAuthProvider()

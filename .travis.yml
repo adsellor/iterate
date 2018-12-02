@@ -7,6 +7,7 @@ cache:
 sudo: enabled
 script:
   - npm install
+  - npm rebuild
   - npm test
   - npm run flow
   - npm run build

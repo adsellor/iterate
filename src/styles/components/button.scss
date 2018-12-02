@@ -1,6 +1,16 @@
 .button {
   text-decoration: none;
-  color: #cecece;
-  font-weight: bold;
-  font-size: 1.5em;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 1em;
+  width: 15em;
+  text-align: center;
+  border-radius: 0.5em;
+  color: white;
+  margin: 1em;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
 }

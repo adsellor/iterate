@@ -3,19 +3,25 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import '../styles/components/button.scss'
+import 'styles/components/button.scss'
 
 type ButtonProps = {
-  className: string,
-  path: string,
+  className?: string,
+  path?: string,
   children: any,
+  onClick: Function,
+  backgroundColor: string,
 }
 
 const Button = (props: ButtonProps) => (
-  <div className={props.className}>
-    <Link className="button" to={props.path}>
-      {props.children}
-    </Link>
+  <div
+    style={{
+      background: props.backgroundColor,
+    }}
+    onClick={props.onClick}
+    className="button"
+  >
+    {props.children}
   </div>
 )
 
