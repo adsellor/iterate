@@ -9,7 +9,6 @@
 </h1>
 
 [![Build Status](https://travis-ci.org/adsellor/iterate.svg?branch=dev)](https://travis-ci.org/adsellor/iterate)
-![](./coverage/badge-branches.svg)
 
 ## 🚀 Quick start
 
