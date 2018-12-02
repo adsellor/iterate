@@ -16,6 +16,7 @@ const MappedPosts = (props: MappedPostsProps) => {
 
     return (
       <BlogPostCard
+        onClick={() => {}}
         key={id}
         src="https://www.planwallpaper.com/static/images/magic-of-blue-universe-images.jpg"
         title={frontmatter.title}

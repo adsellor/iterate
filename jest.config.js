@@ -14,4 +14,14 @@ module.exports = {
     __PATH_PREFIX__: '',
   },
   setupFiles: ['<rootDir>/loadershim.js'],
+
+  collectCoverageFrom: [
+    '**/*.{js,jsx}',
+    '!**/node_modules/**',
+    '!**/vendor/**',
+    '!**/pages/**',
+    '!*.js',
+    '!coverage/**',
+    '!**/styles/**',
+  ],
 }

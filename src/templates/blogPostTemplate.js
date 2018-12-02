@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 // import Helmet from 'react-helmet'
 import Markdown from 'markdown-to-jsx'
 
-import '../styles/base/blogpost-template.scss'
+import '../styles/base/_blogpost-template.scss'
 
 const BlogPostTemplate = ({ data }) => {
   const { markdownRemark: blogPost } = data

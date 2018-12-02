@@ -4,6 +4,8 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import SignInModal from 'components/signinModal'
+
 type LayoutProps = {
   children: React.Node,
 }
@@ -44,6 +46,7 @@ const Layout = ({ children }: LayoutProps) => (
             paddingTop: 0,
           }}
         >
+          <SignInModal>hello</SignInModal>
           {children}
         </div>
       </>

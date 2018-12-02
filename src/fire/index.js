@@ -21,12 +21,20 @@ const firebaseConfig = {
 
 // refactor with simple seperate functions
 
-class Firebase {
+interface IFirebase {
+  signInWithGoogle(): void;
+  signInWithGithub(): void;
+  googleProvider?: typeof undefined | auth.GoogleAuthProvider;
+  githubProvider?: typeof undefined | auth.GithubAuthProvider;
+}
+
+class Firebase implements IFirebase {
   constructor() {
     initializeApp(firebaseConfig)
     this.googleProvider = new auth.GoogleAuthProvider()
     this.githubProvider = new auth.GithubAuthProvider()
   }
+
   signInWithGoogle() {
     auth().signInWithPopup(this.googleProvider)
   }
