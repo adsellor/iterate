@@ -1,5 +1,3 @@
-import { initializeApp, auth } from 'firebase'
-
 import config from 'gatsby-plugin-config'
 
 // You will need to have a .env file in the
@@ -20,18 +18,30 @@ const firebaseConfig = {
 
 // refactor with simple seperate functions
 class Firebase {
-  constructor() {
-    initializeApp(firebaseConfig)
-    this.googleProvider = new auth.GoogleAuthProvider()
-    this.githubProvider = new auth.GithubAuthProvider()
+  constructor(app) {
+    app.initializeApp(firebaseConfig)
+    this.googleProvider = new app.auth.GoogleAuthProvider()
+    this.githubProvider = new app.auth.GithubAuthProvider()
   }
 
   signInWithGoogle() {
-    auth().signInWithPopup(this.googleProvider)
+    app.auth().signInWithPopup(this.googleProvider)
   }
   signInWithGithub() {
-    auth().signInWithPopup(this.githubProvider)
+    app.auth().signInWithPopup(this.githubProvider)
   }
 }
 
-export default Firebase
+let firebase
+
+function getFirebase(app) {
+  if (firebase) {
+    return firebase
+  }
+
+  firebase = new Firebase(app)
+
+  return firebase
+}
+
+export default getFirebase
