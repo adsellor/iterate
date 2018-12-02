@@ -17,6 +17,7 @@ type SignInModalProps = {
 
 type SignInModalState = {
   isVisible: boolean,
+  firebaseApp: Object,
 }
 
 class SignInModal extends React.PureComponent<
@@ -25,7 +26,7 @@ class SignInModal extends React.PureComponent<
 > {
   state = {
     isVisible: false,
-    firebase: null,
+    firebaseApp: {},
   }
 
   onClose = (): void => {
@@ -45,8 +46,8 @@ class SignInModal extends React.PureComponent<
   }
 
   componentDidMount() {
-    const firebase = getFirebase(firebase)
-    this.setState({ firebase })
+    const firebaseApp = getFirebase(firebase)
+    this.setState({ firebaseApp })
   }
 
   render() {
