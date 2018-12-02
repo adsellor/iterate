@@ -1,21 +1,30 @@
+@import '../abstracts/mixins';
+
 .card-wrapper {
-  display: grid;
-  margin: 1em;
-  border-radius: 0.5em;
-  box-shadow: 2px 2px 2px gray;
+  @include flex;
+  flex-direction: column;
+  color: #808080;
+  text-decoration: none;
+  // weird hack for link underline
+  background: linear-gradient(#fff, #fff);
+
   .image {
     background: red;
     width: 100%;
-    border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.25em 0.25em 0 0;
   }
+
   .card-content {
-    padding: 1em;
+    margin-top: 0.5rem;
+
     .article-title {
       font-size: 20px;
       font-weight: 600;
     }
+    
     .article-excerpt {
       font-size: 16px;
+      margin-top: 0.25rem;
       font-weight: 400;
     }
   }

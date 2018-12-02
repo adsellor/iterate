@@ -1,20 +1,45 @@
 @import "../abstracts/mixins";
 
 .header-wrapper {
-  margin-bottom: 1.45rem;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: gray;
-  display: flex;
+  @include flex;
 
-  @include for-size(phone-only) {
-    background-color: red;
-    margin: 10rem;
+  background-color: #fff;
+  height: 50vh;
+  width: 100%;
+  overflow: hidden;
+
+  @include for-size(tablet-portrait-up) {
+    margin-bottom: 2rem;
+    height: 100vh;
   }
-  
-  .header-container {
-    width: 500px;
+
+  .gatsby-image-wrapper {
+    width: 75vw;
+
+    @include for-size(tablet-portrait-up) {
+      width: 50vw;
+      height: 100vh;
+    }
+  }
+
+  .header-text-container {
+    width: 50%;
+    line-height: 1.75;
+
+    .header-iterate-title {
+      padding: 1rem 3rem;
+      white-space: normal;
+      text-align: left;
+      font-size: 2rem;
+      line-height: 1.25;
+    }
+
+    .header-iterate-description {
+      padding: 1rem 3rem;
+      white-space: normal;
+      text-align: left;
+      color: #A0A0A0;
+    }
   }
 
   .resources {

@@ -18,14 +18,21 @@ const MappedPosts = (props: MappedPostsProps) => {
       <BlogPostCard
         onClick={() => {}}
         key={id}
-        src="https://www.planwallpaper.com/static/images/magic-of-blue-universe-images.jpg"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabcqwM0JRtjZFW5Kicp0LNcVHcYri6e4C9VB0Z11fbPU9S_-I"
         title={frontmatter.title}
         excerpt={excerpt}
         path={frontmatter.path}
       />
     )
   })
+
   return mappedPosts
+}
+
+const blogPostStyles = {
+  whiteSpace: 'normal',
+  fontSize: '1.75rem',
+  marginBottom: '1rem'
 }
 
 const BlogPosts = () => (
@@ -46,7 +53,14 @@ const BlogPosts = () => (
         }
       }
     `}
-    render={data => <MappedPosts data={data} />}
+    render = { data => 
+        <div style={{margin: '3rem'}}>
+          <div style={blogPostStyles}>Blog Posts</div>
+          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
+            <MappedPosts data={data} />
+          </div>
+        </div>
+      }
   />
 )
 export default BlogPosts

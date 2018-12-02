@@ -22,3 +22,9 @@
         + "Available breakpoints are: #{map-keys($sizes)}.";
   }
 }
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
