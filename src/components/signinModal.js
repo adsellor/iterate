@@ -1,11 +1,10 @@
 /* @flow */
 
 import * as React from 'react'
-import * as firebase from 'firebase/app'
 
 import Modal from './modal'
 import Button from './button'
-import getFirebase from '../fire'
+import { withFirebase } from '../fire/provider'
 
 import '../styles/components/signin-modal.scss'
 
@@ -13,6 +12,7 @@ import '../styles/components/signin-modal.scss'
 
 type SignInModalProps = {
   anchorElement: any,
+  firebase: Object,
 }
 
 type SignInModalState = {
@@ -23,9 +23,11 @@ class SignInModal extends React.PureComponent<
   SignInModalProps,
   SignInModalState
 > {
-  state = {
-    isVisible: false,
-    firebase: null,
+  constructor() {
+    super()
+    this.state = {
+      isVisible: false,
+    }
   }
 
   onClose = (): void => {
@@ -36,18 +38,8 @@ class SignInModal extends React.PureComponent<
     this.setState({ isVisible: true })
   }
 
-  handleGithubSignin = (): void => {
-    firebase.signInWithGithub()
-  }
-
-  handleGoogleSignin = (): void => {
-    firebase.signInWithGoogle()
-  }
-
-  componentDidMount() {
-    const firebase = getFirebase(firebase)
-    this.setState({ firebase })
-  }
+  handleGithubSignin = () => this.props.firebase.signInWithGithub()
+  handleGoogleSignin = () => this.props.firebase.signInWithGoogle()
 
   render() {
     return (
@@ -71,4 +63,4 @@ class SignInModal extends React.PureComponent<
   }
 }
 
-export default SignInModal
+export default withFirebase(SignInModal)

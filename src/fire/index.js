@@ -15,31 +15,27 @@ const firebaseConfig = {
   storageBucket: 'iterate-4741d.appspot.com',
   messagingSenderId: '785874649615',
 }
-
 // refactor with simple seperate functions
 class Firebase {
   constructor(app) {
     app.initializeApp(firebaseConfig)
+    this.auth = app.auth()
     this.googleProvider = new app.auth.GoogleAuthProvider()
     this.githubProvider = new app.auth.GithubAuthProvider()
   }
 
-  signInWithGoogle() {
-    app.auth().signInWithPopup(this.googleProvider)
-  }
-  signInWithGithub() {
-    app.auth().signInWithPopup(this.githubProvider)
-  }
+  signInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider)
+  signInWithGithub = () => this.auth.signInWithPopup(this.githubProvider)
 }
 
 let firebase
 
-function getFirebase(app) {
+function getFirebase(app, auth) {
   if (firebase) {
     return firebase
   }
 
-  firebase = new Firebase(app)
+  firebase = new Firebase(app, auth)
 
   return firebase
 }
