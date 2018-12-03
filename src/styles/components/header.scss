@@ -3,12 +3,11 @@
 .header-wrapper {
   @include flex;
 
-  background-color: #fff;
-  height: 50vh;
-  width: 100%;
-  overflow: hidden;
-
   @include for-size(tablet-portrait-up) {
+    background-color: #fff;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
     margin-bottom: 2rem;
     height: 100vh;
   }
@@ -23,22 +22,50 @@
   }
 
   .header-text-container {
-    width: 50%;
-    line-height: 1.75;
+    height: 75vh;
+
+    @include for-size(tablet-portrait-up) {
+      width: 50%;
+      line-height: 1.75;
+    }
 
     .header-iterate-title {
-      padding: 1rem 3rem;
+      margin-top: 7rem;
+      padding: 0 1.5rem;
       white-space: normal;
       text-align: left;
-      font-size: 2rem;
-      line-height: 1.25;
+      font-size: 1.5rem;
+      line-height: 1.75;
+
+      @include for-size(tablet-portrait-up) {
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        line-height: 1.25;
+      }
     }
 
     .header-iterate-description {
-      padding: 1rem 3rem;
+      margin-top: 1rem;
+      padding: 0 1.5rem;
       white-space: normal;
       text-align: left;
-      color: #A0A0A0;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #808080;
+
+      @include for-size(tablet-portrait-up) {
+        padding: 1rem 3rem;
+        white-space: normal;
+        text-align: left;
+
+      }
+    }
+
+    .header-button {
+      @include for-size(phone-only) {
+        margin: 1.5rem;
+        width: 10rem;
+      }
     }
   }
 

@@ -1,7 +1,7 @@
 ---
 path: '/test-post'
-title: 'Test post'
-author: 'No one'
+title: 'Building Node.js applications using C++'
+author: 'Drastamat Kanayan'
 date: 21.11.18
 ---
 

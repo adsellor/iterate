@@ -1,0 +1,74 @@
+@import '../abstracts/mixins';
+
+.blog-posts-card-container {
+  @include flex;
+  margin: 1rem 0;
+
+  @include for-size(tablet-portrait-up) {
+    display: inline-block;
+    width: 12.5rem;
+    height: 15rem;
+    marginRight: 1rem;
+    marginBottom: 1.75rem;
+  }
+
+  .blog-posts-card-link-wrapper {
+    // adjust thumbnail size on mobile
+    @include flex;
+    flex-direction: column;
+
+    // weird hack for link underline
+    background: linear-gradient(#fff, #fff);
+    
+    @include for-size(tablet-portrait-up) {
+      flex-direction: column;
+      color: #808080;
+      text-decoration: none;
+    }
+
+    .blog-posts-card-thumbnail {
+      width: 100%;
+
+      @include for-size(tablet-portrait-up) {
+        background: red;
+        width: 100%;
+        border-radius: 0.25em 0.25em 0 0;
+      }
+    }
+
+    .blog-posts-card-content {
+      margin-top: 0.75rem;
+      color: #000;
+
+      @include for-size(tablet-portrait-up) {
+        margin-top: 0.5rem;
+      }
+
+      .blog-posts-card-article-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+
+        @include for-size(tablet-portrait-up) { 
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      
+      .blog-posts-card-article-author {
+        font-size: 1rem;
+        margin-left: 0.25rem;
+      }
+
+      .blog-posts-card-article-excerpt {
+        margin-top: 0.5rem;
+        color: #808080;
+
+        @include for-size(tablet-portrait-up) {
+          font-size: 16px;
+          margin-top: 0.25rem;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

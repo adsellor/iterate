@@ -5,6 +5,8 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import BlogPostCard from './blogCard'
 
+import '../styles/components/blog-posts.scss'
+
 type MappedPostsProps = {
   data: Object,
 }
@@ -20,6 +22,7 @@ const MappedPosts = (props: MappedPostsProps) => {
         key={id}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabcqwM0JRtjZFW5Kicp0LNcVHcYri6e4C9VB0Z11fbPU9S_-I"
         title={frontmatter.title}
+        author={frontmatter.author}
         excerpt={excerpt}
         path={frontmatter.path}
       />
@@ -30,9 +33,7 @@ const MappedPosts = (props: MappedPostsProps) => {
 }
 
 const blogPostStyles = {
-  whiteSpace: 'normal',
-  fontSize: '1.75rem',
-  marginBottom: '1rem'
+
 }
 
 const BlogPosts = () => (
@@ -47,6 +48,7 @@ const BlogPosts = () => (
               frontmatter {
                 title
                 path
+                author
               }
             }
           }
@@ -54,9 +56,9 @@ const BlogPosts = () => (
       }
     `}
     render = { data => 
-        <div style={{margin: '3rem'}}>
-          <div style={blogPostStyles}>Blog Posts</div>
-          <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap'}}>
+        <div className="blog-posts-wrapper">
+          <div className="blog-posts-title">Blog Posts</div>
+          <div className="blog-posts-container">
             <MappedPosts data={data} />
           </div>
         </div>

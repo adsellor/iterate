@@ -19,7 +19,7 @@ const Button = (props: ButtonProps) => (
       background: props.backgroundColor,
     }}
     onClick={props.onClick}
-    className="button"
+    className={`button ${props.className}`}
   >
     {props.children}
   </div>

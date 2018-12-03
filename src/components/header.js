@@ -1,7 +1,8 @@
 import React from 'react'
 
 // import Logo from './logo'
-import Background from './background'
+import Background from './headerImage'
+import Button from './button'
 // import Button from './button'
 
 import 'styles/components/header.scss'
@@ -17,6 +18,7 @@ const Header = ({ siteTitle }) => (
         Iterate hackerspace is a community of Armenian programmers, tech professionals and beginners looking for help.
         We regularly hold workshops of different levels of experience, so those are both interesting for beginners and professionals. 
       </div>
+      <Button className="header-button" backgroundColor="#b20000" children="Sign Up"/>
     </div>
     <Background />
   </div>
