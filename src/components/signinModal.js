@@ -17,7 +17,6 @@ type SignInModalProps = {
 
 type SignInModalState = {
   isVisible: boolean,
-  firebaseApp: Object,
 }
 
 class SignInModal extends React.PureComponent<

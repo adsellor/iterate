@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import 'styles/components/button.scss'
 
 type ButtonProps = {
-  className?: string,
+  className?: ?string,
   path?: string,
   children: any,
   onClick: Function,
@@ -19,7 +19,7 @@ const Button = (props: ButtonProps) => (
       background: props.backgroundColor,
     }}
     onClick={props.onClick}
-    className={`button ${props.className}`}
+    className={`${(props.className, 'button')}`}
   >
     {props.children}
   </div>
