@@ -1,0 +1,7 @@
+@import '../abstracts/mixins';
+
+.header-image {
+  @include for-size(phone-only) {
+    display: none;
+  }
+}

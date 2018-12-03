@@ -1,0 +1,31 @@
+@import '../abstracts/mixins';
+
+.blog-posts-wrapper {
+  margin: 1.5rem;
+  
+  @include for-size(tablet-portrait-up) {
+    margin: 3rem;
+  }
+
+  .blog-posts-title {
+    font-size: 1.5rem;
+
+    @include for-size(tablet-portrait-up) {
+      white-space: normal;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .blog-posts-container {
+    @include flex;
+    flex-direction: column;
+
+    @include for-size(tablet-portrait-up) {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+ }

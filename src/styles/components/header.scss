@@ -1,20 +1,72 @@
 @import "../abstracts/mixins";
 
 .header-wrapper {
-  margin-bottom: 1.45rem;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: gray;
-  display: flex;
+  @include flex;
 
-  @include for-size(phone-only) {
-    background-color: red;
-    margin: 10rem;
+  @include for-size(tablet-portrait-up) {
+    background-color: #fff;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    height: 100vh;
   }
-  
-  .header-container {
-    width: 500px;
+
+  .gatsby-image-wrapper {
+    width: 75vw;
+
+    @include for-size(tablet-portrait-up) {
+      width: 50vw;
+      height: 100vh;
+    }
+  }
+
+  .header-text-container {
+    height: 75vh;
+
+    @include for-size(tablet-portrait-up) {
+      width: 50%;
+      line-height: 1.75;
+    }
+
+    .header-iterate-title {
+      margin-top: 7rem;
+      padding: 0 1.5rem;
+      white-space: normal;
+      text-align: left;
+      font-size: 1.5rem;
+      line-height: 1.75;
+
+      @include for-size(tablet-portrait-up) {
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        line-height: 1.25;
+      }
+    }
+
+    .header-iterate-description {
+      margin-top: 1rem;
+      padding: 0 1.5rem;
+      white-space: normal;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #808080;
+
+      @include for-size(tablet-portrait-up) {
+        padding: 1rem 3rem;
+        white-space: normal;
+        text-align: left;
+
+      }
+    }
+
+    .header-button {
+      @include for-size(phone-only) {
+        margin: 1.5rem;
+        width: 10rem;
+      }
+    }
   }
 
   .resources {
