@@ -1,5 +1,9 @@
 @import "./base/normalize";
 
+// optimize styles for super small devices (<320)
+// (460-600 broken)
+// (600-900 blog posts)
+
 p {
   margin: 0;
 }

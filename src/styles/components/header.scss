@@ -22,10 +22,10 @@
   }
 
   .header-text-container {
-    height: 75vh;
+    height: 70vh;
 
     @include for-size(tablet-portrait-up) {
-      width: 50%;
+      width: 100%;
       line-height: 1.75;
     }
 
@@ -38,8 +38,8 @@
       line-height: 1.75;
 
       @include for-size(tablet-portrait-up) {
+        margin-top: 0;
         padding: 1rem 3rem;
-        font-size: 2rem;
         line-height: 1.25;
       }
     }
@@ -62,9 +62,11 @@
     }
 
     .header-button {
-      @include for-size(phone-only) {
-        margin: 1.5rem;
-        width: 10rem;
+      margin: 1.5rem;
+      width: 10rem;
+      
+      @include for-size(tablet-portrait-up) {
+        margin: 3rem;
       }
     }
   }

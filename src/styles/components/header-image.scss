@@ -1,7 +1,9 @@
 @import '../abstracts/mixins';
 
 .header-image {
-  @include for-size(phone-only) {
-    display: none;
+  display: none;
+
+  @include for-size(tablet-landscape-up) {
+    display: block;
   }
 }
