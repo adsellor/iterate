@@ -9,7 +9,10 @@ import Button from './button'
 import 'styles/components/header.scss'
 import SigninModal from './signinModal'
 
-class Header extends PureComponent {
+type HeaderState = {
+  isSignUpModalVisible: boolean,
+}
+class Header extends PureComponent<*, HeaderState> {
   state = {
     isSignUpModalVisible: false,
   }
