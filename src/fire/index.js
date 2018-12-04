@@ -8,7 +8,7 @@ import config from 'gatsby-plugin-config'
 // https://www.gatsbyjs.org/packages/gatsby-plugin-config/?=dotenv
 
 const firebaseConfig = {
-  apiKey: config.API_KEY,
+  apiKey: 'AIzaSyBL-TkMX70jJdFnf2i86z7dJqOfUumy_Bc',
   authDomain: 'iterate-4741d.firebaseapp.com',
   databaseURL: 'https://iterate-4741d.firebaseio.com',
   projectId: 'iterate-4741d',

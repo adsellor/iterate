@@ -14,13 +14,12 @@ class IndexPage extends PureComponent {
   }
 
   componentDidMount() {
-    const app = React.lazy(() => import('firebase/app'))
-    const auth = React.lazy(() => import('firebase/auth'))
+    const app = import('firebase/app')
+    const auth = import('firebase/auth')
 
     Promise.all([app, auth]).then(values => {
       const firebase = getFirebase(values[0])
       this.setState({ firebase })
-      console.log(this.state.firebase)
     })
   }
 
