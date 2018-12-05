@@ -10,3 +10,5 @@ fire/index.js
 
 # config file
 .env
+
+src/fire/index.js
