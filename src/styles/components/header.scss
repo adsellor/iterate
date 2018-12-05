@@ -23,8 +23,14 @@
   }
 
   .header-text-container {
+    // ? double check
     @include for-size(tablet-portrait-up) {
       width: 100%;
+      line-height: 1.75;
+    }
+
+    @include for-size(tablet-landscape-up) {
+      width: 50%;
       line-height: 1.75;
     }
 

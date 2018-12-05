@@ -8,7 +8,7 @@ import { withFirebase } from '../fire/provider'
 
 import '../styles/components/signin-modal.scss'
 
-// move to seperate signin wrapper
+// TODO: move to seperate signin wrapper
 
 type SignInModalProps = {
   firebase: Object,

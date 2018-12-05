@@ -15,7 +15,7 @@ const firebaseConfig = {
   storageBucket: 'iterate-4741d.appspot.com',
   messagingSenderId: '785874649615',
 }
-// refactor with simple seperate functions
+// TODO: refactor with simple seperate functions
 class Firebase {
   constructor(app) {
     app.initializeApp(firebaseConfig)
