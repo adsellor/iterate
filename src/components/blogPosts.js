@@ -32,9 +32,7 @@ const MappedPosts = (props: MappedPostsProps) => {
   return mappedPosts
 }
 
-const blogPostStyles = {
-
-}
+const blogPostStyles = {}
 
 const BlogPosts = () => (
   <StaticQuery
@@ -56,14 +54,14 @@ const BlogPosts = () => (
       }
     `}
     // TODO: limit number of rendered posts to 8 at a time
-    render = { data => 
-        <div className="blog-posts-wrapper">
-          <div className="blog-posts-title">Blog Posts</div>
-          <div className="blog-posts-container">
-            <MappedPosts data={data} />
-          </div>
+    render={data => (
+      <div className="blog-posts-wrapper">
+        <div className="blog-posts-title">Blog Posts</div>
+        <div className="blog-posts-container">
+          <MappedPosts data={data} />
         </div>
-      }
+      </div>
+    )}
   />
 )
 export default BlogPosts

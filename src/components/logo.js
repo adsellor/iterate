@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 const logoStyles = {
-  height: 'auto'
+  height: 'auto',
 }
 
 const Image = () => (

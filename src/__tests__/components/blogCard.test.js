@@ -15,7 +15,7 @@ describe('BlogPostCard renders', () => {
       <BlogPostCard src={src} title={title} excerpt={excerpt} />
     )
     expect(blogPostCard.find('img').props().src).toEqual(`${src}`)
-    //! no need for this further, gatsby gives ready excerpt 
+    //! no need for this further, gatsby gives ready excerpt
     // TODO: delete
     expect(blogPostCard.find('div.blog-posts-card-content').text()).toBe(
       `${title + 'by ' + excerpt + '...'}`

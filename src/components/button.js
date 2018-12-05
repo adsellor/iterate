@@ -25,4 +25,3 @@ const Button = (props: ButtonProps) => (
 )
 
 export default Button
-    
