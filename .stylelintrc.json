@@ -1,6 +1,20 @@
 {
   "extends": "stylelint-config-recommended",
   "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "function",
+          "if",
+          "each",
+          "include",
+          "mixin",
+          "else",
+          "warn"
+        ]
+      }
+    ],
     "block-no-empty": null,
     "unit-whitelist": [
       "em",
@@ -8,7 +22,9 @@
       "s",
       "%",
       "vw",
-      "vh"
+      "vh",
+      "px",
+      "deg"
     ]
   }
 }
