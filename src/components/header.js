@@ -12,6 +12,7 @@ import SigninModal from './signinModal'
 type HeaderState = {
   isSignUpModalVisible: boolean,
 }
+
 class Header extends PureComponent<*, HeaderState> {
   state = {
     isSignUpModalVisible: false,

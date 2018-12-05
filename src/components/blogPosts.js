@@ -55,6 +55,7 @@ const BlogPosts = () => (
         }
       }
     `}
+    // limit number of rendered posts to 8 at a time
     render = { data => 
         <div className="blog-posts-wrapper">
           <div className="blog-posts-title">Blog Posts</div>

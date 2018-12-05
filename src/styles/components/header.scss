@@ -1,4 +1,5 @@
 @import "../abstracts/mixins";
+@import "../abstracts/variables";
 
 .header-wrapper {
   @include flex;
@@ -29,7 +30,7 @@
 
     .header-iterate-title {
       margin-top: 7rem;
-      padding: 0 1.5rem;
+      padding: 0 map-get($layout-margin, phone-only);
       white-space: normal;
       text-align: left;
       font-size: 1.5rem;
@@ -37,14 +38,14 @@
 
       @include for-size(tablet-portrait-up) {
         margin-top: 0;
-        padding: 1rem 3rem;
+        padding: 1rem map-get($layout-margin, tablet-portrait-up);
         line-height: 1.25;
       }
     }
 
     .header-iterate-description {
       margin-top: 1rem;
-      padding: 0 1.5rem;
+      padding: 0 map-get($layout-margin, phone-only);
       white-space: normal;
       text-align: left;
       font-size: 1rem;
@@ -52,7 +53,7 @@
       color: #808080;
 
       @include for-size(tablet-portrait-up) {
-        padding: 1rem 3rem;
+        padding: 1rem map-get($layout-margin, tablet-portrait-up);
         white-space: normal;
         text-align: left;
 
@@ -60,11 +61,11 @@
     }
 
     .header-button {
-      margin: 1.5rem;
+      margin: map-get($layout-margin, phone-only);
       width: 10rem;
       
       @include for-size(tablet-portrait-up) {
-        margin: 3rem;
+        margin: map-get($layout-margin, tablet-portrait-up);
       }
     }
   }

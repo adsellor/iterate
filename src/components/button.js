@@ -1,7 +1,6 @@
 /* @flow */
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 import 'styles/components/button.scss'
 
@@ -19,10 +18,11 @@ const Button = (props: ButtonProps) => (
       background: props.backgroundColor,
     }}
     onClick={props.onClick}
-    className={`${(props.className, 'button')}`}
+    className={`${`button ${props.className}`}`}
   >
     {props.children}
   </div>
 )
 
 export default Button
+    

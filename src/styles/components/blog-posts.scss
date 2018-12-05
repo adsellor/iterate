@@ -1,10 +1,11 @@
 @import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 .blog-posts-wrapper {
-  margin: 1.5rem;
+  margin: map-get($layout-margin, phone-only);
   
   @include for-size(tablet-portrait-up) {
-    margin: 3rem;
+    margin: map-get($layout-margin, tablet-portrait-up);
   }
 
   .blog-posts-title {
