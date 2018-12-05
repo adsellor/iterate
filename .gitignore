@@ -7,6 +7,7 @@ fire/index.js
 # Build directory
 /public
 .DS_Store
+.vscode
 
 # config file
 .env
