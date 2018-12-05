@@ -9,4 +9,16 @@
     font-size: 2em;
     line-height: normal;
   }
+  
+  %base-button {
+    margin: 1em;
+  }
+  
+  .google-button {
+    @extend %base-button
+  }
+
+  .github-button {
+    @extend %base-button
+  }
 }

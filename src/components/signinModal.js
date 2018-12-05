@@ -32,10 +32,10 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
           <p className="signin-text">
             Sign in, and join the community of awesomeness
           </p>
-          <Button onClick={this.handleGithubSignin} backgroundColor="#333">
+          <Button className="github-button" onClick={this.handleGithubSignin} backgroundColor="#333">
             Sign in with Github
           </Button>
-          <Button onClick={this.handleGoogleSignin} backgroundColor="#d62d20">
+          <Button className="google-button" onClick={this.handleGoogleSignin} backgroundColor="#d62d20">
             Sign in with Google
           </Button>
         </div>
