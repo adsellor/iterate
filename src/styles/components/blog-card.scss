@@ -6,9 +6,11 @@
 
   @include for-size(tablet-portrait-up) {
     display: inline-block;
+    width: 45%;
+  }
+
+  @include for-size(tablet-landscape-up) {
     width: 12.5rem;
-    // margin-right: 1rem;
-    // margin-bottom: 1.75rem;
   }
 
   .blog-posts-card-link-wrapper {
