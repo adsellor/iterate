@@ -2,10 +2,10 @@
 
 .header-wrapper {
   @include flex;
+  height: auto;
 
   @include for-size(tablet-portrait-up) {
     background-color: #fff;
-    height: 50vh;
     width: 100%;
     overflow: hidden;
     margin-bottom: 2rem;
@@ -22,8 +22,6 @@
   }
 
   .header-text-container {
-    height: 70vh;
-
     @include for-size(tablet-portrait-up) {
       width: 100%;
       line-height: 1.75;
