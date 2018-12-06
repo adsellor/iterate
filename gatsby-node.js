@@ -47,3 +47,14 @@ exports.onCreateWebpackConfig = ({ actions, stage }) => {
     })
   }
 }
+
+exports.onCreatePage = async ({ page, actions }) => {
+  const { createPage } = actions
+
+  // match pages only on client
+  if (page.path.match(/^\/authedOnly/)) {
+    page.matchPath = `/home`
+
+    createPage(page)
+  }
+}

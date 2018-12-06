@@ -7,12 +7,10 @@ import AuthProvider from '../store/auth'
 import '../styles/main.scss'
 
 const IndexPage = () => (
-  <AuthProvider>
-    <Layout>
-      <Header />
-      <BlogPosts />
-    </Layout>
-  </AuthProvider>
+  <Layout>
+    <Header />
+    <BlogPosts />
+  </Layout>
 )
 
 export default IndexPage

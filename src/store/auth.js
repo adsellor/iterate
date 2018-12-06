@@ -6,13 +6,11 @@ import FirebaseProvider from './firebase'
 
 type AuthProviderState = {
   authed: boolean,
+  displayName: string,
+  email: string,
 }
 
-const initState: AuthProviderState = {
-  authed: false,
-}
-
-const AuthContext = React.createContext(initState)
+const AuthContext = React.createContext(null)
 
 const withAuth = Component => props => (
   <AuthContext.Consumer>
@@ -24,7 +22,9 @@ const withAuth = Component => props => (
 
 class AuthProvider extends PureComponent<*, AuthProviderState> {
   state = {
-    ...initState,
+    authed: false,
+    displayName: '',
+    email: '',
   }
 
   actions = {
@@ -33,7 +33,10 @@ class AuthProvider extends PureComponent<*, AuthProviderState> {
         authed: true,
       })),
 
-    handleLogut: () => this.setState(initState),
+    handleLogut: () =>
+      this.setState(state => ({
+        authed: !state.authed,
+      })),
   }
 
   render() {

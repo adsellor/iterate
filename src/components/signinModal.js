@@ -29,7 +29,6 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
     })
 
   render() {
-    console.log(this.props, this.props.authState.authed)
     return (
       <Modal onClose={this.props.onClose} isVisible={this.props.isVisible}>
         <div className="signin-modal">
