@@ -5,13 +5,14 @@ import * as React from 'react'
 import Modal from './modal'
 import Button from './button'
 import { withFirebase } from '../fire/provider'
+import { withAuth } from '../store/auth'
 
 import '../styles/components/signin-modal.scss'
 
 // TODO: move to seperate signin wrapper
 
 type SignInModalProps = {
-  firebase: Object,
+  store: Object,
   onClose: Function,
   isVisible: boolean,
 }
@@ -19,23 +20,31 @@ type SignInModalProps = {
 // type SignInModalState = {}
 
 class SignInModal extends React.PureComponent<SignInModalProps, *> {
-  handleGithubSignin = () => this.props.firebase.signInWithGithub()
+  handleGithubSignin = () => this.props.store.firebase.signInWithGithub()
   handleGoogleSignin = () =>
-    this.props.firebase.signInWithGoogle().then(result => {
-      console.log(result)
-    })
+    this.props.store.firebase.signInWithGoogle().then(result => {})
 
   render() {
+    console.log(this.props)
+
     return (
       <Modal onClose={this.props.onClose} isVisible={this.props.isVisible}>
         <div className="signin-modal">
           <p className="signin-text">
             Sign in, and join the community of awesomeness
           </p>
-          <Button className="github-button" onClick={this.handleGithubSignin} backgroundColor="#333">
+          <Button
+            className="github-button"
+            onClick={this.handleGithubSignin}
+            backgroundColor="#333"
+          >
             Sign in with Github
           </Button>
-          <Button className="google-button" onClick={this.handleGoogleSignin} backgroundColor="#d62d20">
+          <Button
+            className="google-button"
+            onClick={this.handleGoogleSignin}
+            backgroundColor="#d62d20"
+          >
             Sign in with Google
           </Button>
         </div>
@@ -44,4 +53,4 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
   }
 }
 
-export default withFirebase(SignInModal)
+export default withAuth(SignInModal)
