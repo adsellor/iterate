@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react'
 import Layout from 'components/layout'
 import Header from 'components/header'
 import BlogPosts from 'components/blogPosts'
+import Footer from 'components/footer'
 import FirebaseContext from '../fire/provider'
 import getFirebase from '../fire'
 
@@ -29,6 +30,7 @@ class IndexPage extends PureComponent {
         <Layout>
           <Header />
           <BlogPosts />
+          <Footer />
         </Layout>
       </FirebaseContext.Provider>
     )

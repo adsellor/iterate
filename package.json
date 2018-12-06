@@ -37,9 +37,10 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\" && stylelint --fix \"src/**/*.scss\"",
     "lint:scss": "stylelint \"src/**/*.scss\"",
     "lint:js": "prettier -l \"src/**/*.js\"",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "format": "prettier --write \"src/**/*.js\" && stylelint --fix \"src/**/*.scss\"",
     "flow": "flow",
     "test": "jest --coverage"
   },

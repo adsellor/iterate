@@ -33,7 +33,7 @@ const BlogPostCard = (props: BlogPostCardProps) => (
             by {props.author}
           </span>
         </em>
-        <p className="blog-posts-card-article-excerpt">{props.excerpt}...</p>
+        <p className="blog-posts-card-article-excerpt">{props.excerpt}</p>
       </div>
     </Link>
   </div>

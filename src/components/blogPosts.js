@@ -18,7 +18,7 @@ const MappedPosts = (props: MappedPostsProps) => {
 
     return (
       <BlogPostCard
-        onClick={() => {}}
+        onClick={() => { }}
         key={id}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabcqwM0JRtjZFW5Kicp0LNcVHcYri6e4C9VB0Z11fbPU9S_-I"
         title={frontmatter.title}
@@ -55,10 +55,12 @@ const BlogPosts = () => (
     `}
     // TODO: limit number of rendered posts to 8 at a time
     render={data => (
-      <div className="blog-posts-wrapper">
-        <div className="blog-posts-title">Blog Posts</div>
-        <div className="blog-posts-container">
-          <MappedPosts data={data} />
+      <div className="blog-posts-parent">
+        <div className="blog-posts-wrapper">
+          <div className="blog-posts-title">Blog Posts</div>
+          <div className="blog-posts-container">
+            <MappedPosts data={data} />
+          </div>
         </div>
       </div>
     )}

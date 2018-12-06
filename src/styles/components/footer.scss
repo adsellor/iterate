@@ -1,0 +1,28 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.footer-wrapper {
+  background-color: #000;
+  width: 100vw;
+  margin-top: 2rem;
+  font-size: 0.75rem;
+
+  .footer-link-layout {
+    @include flex;
+    
+    justify-content: space-between;
+    padding: map-get($layout-margin, phone-only);
+
+    @include for-size(tablet-portrait-up) {
+      padding: map-get($layout-margin, tablet-portrait-up);
+    }
+
+    @include for-size(tablet-portrait-up) {
+      padding: map-get($layout-margin, tablet-landscape-up);
+    }
+
+    .footer-link {
+      color: #fff;
+    }
+  }
+}
