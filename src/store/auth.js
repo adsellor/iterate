@@ -39,11 +39,9 @@ class AuthProvider extends PureComponent<*, AuthProviderState> {
   render() {
     const { state, actions } = this
     return (
-      <FirebaseProvider>
-        <AuthContext.Provider value={{ state, actions }}>
-          {this.props.children}
-        </AuthContext.Provider>
-      </FirebaseProvider>
+      <AuthContext.Provider value={{ state, actions }}>
+        <FirebaseProvider>{this.props.children}</FirebaseProvider>
+      </AuthContext.Provider>
     )
   }
 }

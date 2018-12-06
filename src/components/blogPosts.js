@@ -32,8 +32,6 @@ const MappedPosts = (props: MappedPostsProps) => {
   return mappedPosts
 }
 
-const blogPostStyles = {}
-
 const BlogPosts = () => (
   <StaticQuery
     query={graphql`

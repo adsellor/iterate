@@ -1,6 +1,7 @@
 /* @flow */
 
 import * as React from 'react'
+import { navigate } from 'gatsby'
 
 import Modal from './modal'
 import Button from './button'
@@ -20,13 +21,15 @@ type SignInModalProps = {
 // type SignInModalState = {}
 
 class SignInModal extends React.PureComponent<SignInModalProps, *> {
-  handleGithubSignin = () => this.props.store.firebase.signInWithGithub()
+  handleGithubSignin = () => this.props.store.signInWithGithub()
   handleGoogleSignin = () =>
-    this.props.store.firebase.signInWithGoogle().then(result => {})
+    this.props.store.signInWithGoogle().then(result => {
+      this.props.actions.handleSignin()
+      this.props.authState.authed && navigate('/home')
+    })
 
   render() {
-    console.log(this.props)
-
+    console.log(this.props, this.props.authState.authed)
     return (
       <Modal onClose={this.props.onClose} isVisible={this.props.isVisible}>
         <div className="signin-modal">
@@ -53,4 +56,4 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
   }
 }
 
-export default withAuth(SignInModal)
+export default withAuth(withFirebase(SignInModal))
