@@ -5,7 +5,7 @@ import { navigate } from 'gatsby'
 
 import Modal from './modal'
 import Button from './button'
-import { withFirebase } from '../fire/provider'
+import { withFirebase } from '../store/provider'
 import { withAuth } from '../store/auth'
 
 import '../styles/components/signin-modal.scss'
@@ -25,11 +25,13 @@ type SignInModalProps = {
 class SignInModal extends React.PureComponent<SignInModalProps, *> {
   handleGithubSignin = () => this.props.store.signInWithGithub()
   handleGoogleSignin = () =>
-    this.props.store.signInWithGoogle().then(result => {
-      this.props.actions.handleSignin()
-      this.props.authState.authed && navigate('/home')
-    })
-
+    this.props.store
+      .signInWithGoogle()
+      .then(result => {
+        this.props.actions.handleSignin()
+        this.props.authState.authed && navigate('/home')
+      })
+      .catch(e => console.log(e))
   render() {
     return (
       <Modal onClose={this.props.onClose} isVisible={this.props.isVisible}>

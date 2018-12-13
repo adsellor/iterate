@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 
-import FirebaseContext from '../fire/provider'
+import FirebaseContext from './provider'
 import getFirebase from '../fire'
 
 type ProviderState = {
