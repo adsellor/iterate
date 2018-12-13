@@ -9,6 +9,7 @@ type AuthProviderState = {
   authed: boolean,
   displayName: string,
   email: string,
+  avatar: string,
 }
 
 const AuthContext: Object = React.createContext({})
@@ -26,11 +27,14 @@ class AuthProvider extends PureComponent<*, AuthProviderState> {
     authed: false,
     displayName: '',
     email: '',
+    avatar: '',
   }
 
   actions = {
     handleSignin: () => this.setState({ authed: true }),
     handleLogout: () => this.setState({ authed: false }),
+    setDisplayName: displayName => this.setState({ displayName }),
+    setAvatar: avatar => this.setState({ avatar }),
   }
 
   render() {

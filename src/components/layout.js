@@ -4,8 +4,6 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-// import Navbar from './navbar'
-
 type LayoutProps = {
   children: React.Node,
 }

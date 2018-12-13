@@ -3,13 +3,21 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import SignInModal from './signinModal'
+import { withAuth } from 'src/store/auth'
 
-const Navbar = () => (
-  <div className="navbar-wrapper">
-    <Link to="/about"> About </Link>
-    <SignInModal anchorElement="Sign in" />
-  </div>
-)
+import UserBadge from './userBadge'
 
-export default Navbar
+import 'styles/components/navbar.scss'
+
+const Navbar = props => {
+  console.log(props)
+
+  return (
+    <div className="navbar-wrapper">
+      <Link to="/"> Home </Link>
+      {props.authState.authed && <UserBadge avatar={props.authState.avatar} />}
+    </div>
+  )
+}
+
+export default withAuth(Navbar)

@@ -30,6 +30,9 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
       .then(result => {
         this.props.actions.handleSignin()
         this.props.authState.authed && navigate('/home')
+        this.props.actions.setDisplayName(result.user.displayName)
+        this.props.actions.setAvatar(result.user.photoURL)
+        console.log(result.user.photoURL)
       })
       .catch(e => console.log(e))
   render() {

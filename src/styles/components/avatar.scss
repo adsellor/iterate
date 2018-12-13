@@ -1,0 +1,7 @@
+.avatar {
+  width: 3em;
+  border-radius: 90%;
+  &:hover {
+    cursor: pointer;
+  }
+}
