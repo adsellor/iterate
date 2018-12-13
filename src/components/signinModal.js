@@ -16,6 +16,8 @@ type SignInModalProps = {
   store: Object,
   onClose: Function,
   isVisible: boolean,
+  actions: Object,
+  authState: Object,
 }
 
 // type SignInModalState = {}
@@ -55,4 +57,4 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
   }
 }
 
-export default withAuth(withFirebase(SignInModal))
+export default withFirebase(withAuth(SignInModal))

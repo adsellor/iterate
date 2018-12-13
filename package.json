@@ -41,7 +41,7 @@
     "lint:scss": "stylelint \"src/**/*.scss\"",
     "lint:js": "prettier -l \"src/**/*.js\"",
     "flow": "flow",
-    "test": "jest --coverage"
+    "test": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.1.5",

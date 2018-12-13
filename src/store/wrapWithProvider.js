@@ -1,5 +1,5 @@
 import React from 'react'
 
-import AuthProvider from './auth'
+import FirebaseProvider from './firebase'
 
-export default ({ element }) => <AuthProvider>{element}</AuthProvider>
+export default ({ element }) => <FirebaseProvider>{element}</FirebaseProvider>

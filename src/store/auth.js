@@ -1,6 +1,7 @@
 /* @flow */
 
 import React, { PureComponent } from 'react'
+
 import { withFirebase } from '../fire/provider'
 import FirebaseProvider from './firebase'
 
@@ -10,9 +11,9 @@ type AuthProviderState = {
   email: string,
 }
 
-const AuthContext = React.createContext(null)
+const AuthContext: Object = React.createContext(null)
 
-const withAuth = Component => props => (
+const withAuth = (Component: any) => (props: Object) => (
   <AuthContext.Consumer>
     {value => (
       <Component {...props} authState={value.state} actions={value.actions} />
@@ -28,18 +29,12 @@ class AuthProvider extends PureComponent<*, AuthProviderState> {
   }
 
   actions = {
-    handleSignin: () =>
-      this.setState(() => ({
-        authed: true,
-      })),
-
-    handleLogut: () =>
-      this.setState(state => ({
-        authed: !state.authed,
-      })),
+    handleSignin: () => this.setState({ authed: true }),
+    handleLogout: () => this.setState({ authed: false }),
   }
 
   render() {
+    console.log(this.props)
     const { state, actions } = this
     return (
       <AuthContext.Provider value={{ state, actions }}>
@@ -50,4 +45,4 @@ class AuthProvider extends PureComponent<*, AuthProviderState> {
 }
 
 export { withAuth }
-export default AuthProvider
+export default withFirebase(AuthProvider)
