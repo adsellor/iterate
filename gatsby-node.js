@@ -53,8 +53,7 @@ exports.onCreatePage = async ({ page, actions }) => {
 
   // match pages only on client
   if (page.path.match(/^\/authedOnly/)) {
-    page.matchPath = `/home`
-
+    page.matchPath = '/*'
     createPage(page)
   }
 }

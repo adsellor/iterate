@@ -6,7 +6,7 @@ import { withFirebase } from './provider'
 
 type AuthProviderState = {
   authed: boolean,
-  user: Object,
+  user: Object | null,
 }
 
 const AuthContext: Object = React.createContext({})

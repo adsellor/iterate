@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Suspense } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 
 import UserBadge from 'components/userBadge'

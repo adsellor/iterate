@@ -19,24 +19,29 @@ const firebaseConfig = {
 class Firebase {
   constructor(app) {
     app.initializeApp(firebaseConfig)
+
     this.auth = app.auth()
+    this.db = app.database()
+    this.storage = app.storage()
+
     this.googleProvider = new app.auth.GoogleAuthProvider()
     this.githubProvider = new app.auth.GithubAuthProvider()
   }
 
   signInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider)
-  signInWithGithub = () => this.auth.signInWithPopup(this.githubProvider)
+  signInWithGithub = () =>
+    this.auth.signIwithFirebasenWithPopup(this.githubProvider)
   getCurrentUser = cb => this.auth.onAuthStateChanged(cb)
 }
 
 let firebase
 
-function getFirebase(app, auth) {
+function getFirebase(app, auth, db, storage) {
   if (firebase) {
     return firebase
   }
 
-  firebase = new Firebase(app, auth)
+  firebase = new Firebase(app, auth, db)
 
   return firebase
 }

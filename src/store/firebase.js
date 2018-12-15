@@ -16,7 +16,10 @@ class FirebaseProvider extends PureComponent<*, ProviderState> {
   componentDidMount() {
     const app = import('firebase/app')
     const auth = import('firebase/auth')
-    Promise.all([app, auth]).then(values => {
+    const db = import('firebase/database')
+    const storage = import('firebase/storage')
+
+    Promise.all([app, auth, db, storage]).then(values => {
       const firebase = getFirebase(values[0])
       this.setState({ firebase })
     })

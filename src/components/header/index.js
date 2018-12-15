@@ -42,9 +42,10 @@ class Header extends PureComponent<*, HeaderState> {
           <Button
             className="header-button"
             backgroundColor="#b20000"
-            children="Sign Up"
             onClick={this.onOpen}
-          />
+          >
+            Sign Up
+          </Button>
           <SigninModal
             onClose={this.onClose}
             isVisible={this.state.isSignUpModalVisible}
