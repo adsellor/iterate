@@ -1,6 +1,7 @@
 /* @flow */
 
 import React, { PureComponent } from 'react'
+import { navigate } from 'gatsby'
 
 import { withFirebase } from './provider'
 import FirebaseProvider from './firebase'
@@ -31,10 +32,26 @@ class AuthProvider extends PureComponent<*, AuthProviderState> {
   }
 
   actions = {
-    handleSignin: () => this.setState({ authed: true }),
     handleLogout: () => this.setState({ authed: false }),
-    setDisplayName: displayName => this.setState({ displayName }),
-    setAvatar: avatar => this.setState({ avatar }),
+    setUser: user => this.setUser(user),
+  }
+
+  handleSignin = () => this.setState({ authed: true })
+  setDisplayName = displayName => this.setState({ displayName })
+  setAvatar = avatar => this.setState({ avatar })
+
+  setUser = (user: Object): void => {
+    this.handleSignin()
+    this.setDisplayName(user.displayName)
+    this.setAvatar(user.photoURL)
+  }
+
+  componentDidUpdate(): void {
+    this.props.store.getCurrentUser(user => {
+      if (user) {
+        this.setUser(user)
+      }
+    })
   }
 
   render() {

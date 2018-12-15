@@ -26,7 +26,7 @@ class Firebase {
 
   signInWithGoogle = () => this.auth.signInWithPopup(this.googleProvider)
   signInWithGithub = () => this.auth.signInWithPopup(this.githubProvider)
-  getCurrentUser = () => this.auth.currentUser
+  getCurrentUser = cb => this.auth.onAuthStateChanged(cb)
 }
 
 let firebase

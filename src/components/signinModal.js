@@ -28,11 +28,9 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
     this.props.store
       .signInWithGoogle()
       .then(result => {
-        this.props.actions.handleSignin()
-        this.props.authState.authed && navigate('/home')
-        this.props.actions.setDisplayName(result.user.displayName)
-        this.props.actions.setAvatar(result.user.photoURL)
-        console.log(result.user.photoURL)
+        this.props.actions.setUser(result.user)
+        localStorage.setItem('user', result.user.uid)
+        navigate('/home')
       })
       .catch(e => console.log(e))
   render() {
