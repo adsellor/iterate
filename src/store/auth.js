@@ -1,16 +1,12 @@
 /* @flow */
 
 import React, { PureComponent } from 'react'
-import { navigate } from 'gatsby'
 
 import { withFirebase } from './provider'
-import FirebaseProvider from './firebase'
 
 type AuthProviderState = {
   authed: boolean,
-  displayName: string,
-  email: string,
-  avatar: string,
+  user: Object,
 }
 
 const AuthContext: Object = React.createContext({})
@@ -26,30 +22,18 @@ const withAuth = (Component: any) => (props: Object) => (
 class AuthProvider extends PureComponent<*, AuthProviderState> {
   state = {
     authed: false,
-    displayName: '',
-    email: '',
-    avatar: '',
+    user: null,
   }
 
   actions = {
     handleLogout: () => this.setState({ authed: false }),
-    setUser: user => this.setUser(user),
-  }
-
-  handleSignin = () => this.setState({ authed: true })
-  setDisplayName = displayName => this.setState({ displayName })
-  setAvatar = avatar => this.setState({ avatar })
-
-  setUser = (user: Object): void => {
-    this.handleSignin()
-    this.setDisplayName(user.displayName)
-    this.setAvatar(user.photoURL)
+    setUser: user => this.setState({ user }),
   }
 
   componentDidUpdate(): void {
     this.props.store.getCurrentUser(user => {
       if (user) {
-        this.setUser(user)
+        this.setState({ user })
       }
     })
   }

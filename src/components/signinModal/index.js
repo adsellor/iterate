@@ -3,12 +3,12 @@
 import * as React from 'react'
 import { navigate } from 'gatsby'
 
-import Modal from './modal'
-import Button from './button'
-import { withFirebase } from '../store/provider'
-import { withAuth } from '../store/auth'
+import Modal from 'components/modal'
+import Button from 'components/button'
+import { withFirebase } from 'src/store/provider'
+import { withAuth } from 'src/store/auth'
 
-import '../styles/components/signin-modal.scss'
+import 'styles/components/signin-modal.scss'
 
 // TODO: move to seperate signin wrapper
 
@@ -29,7 +29,6 @@ class SignInModal extends React.PureComponent<SignInModalProps, *> {
       .signInWithGoogle()
       .then(result => {
         this.props.actions.setUser(result.user)
-        localStorage.setItem('user', result.user.uid)
         navigate('/home')
       })
       .catch(e => console.log(e))

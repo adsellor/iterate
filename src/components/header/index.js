@@ -3,11 +3,11 @@
 import React, { PureComponent } from 'react'
 
 // import Logo from './logo'
-import Background from './headerImage'
-import Button from './button'
+import Background from 'components/headerImage'
+import Button from 'components/button'
+import SigninModal from 'components/signinModal'
 
 import 'styles/components/header.scss'
-import SigninModal from './signinModal'
 
 type HeaderState = {
   isSignUpModalVisible: boolean,

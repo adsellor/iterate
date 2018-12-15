@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import '../styles/components/header-image.scss'
+import 'styles/components/header-image.scss'
 
 const Image = () => (
   <StaticQuery

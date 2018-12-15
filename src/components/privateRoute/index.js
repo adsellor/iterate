@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby'
 
-import { withAuth } from '../store/auth'
+import { withAuth } from 'src/store/auth'
 
 const PrivateRoute = ({ component: Component, location, ...props }) => {
   if (!localStorage.getItem('user') && location.pathname !== `/`) {

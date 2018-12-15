@@ -1,5 +1,5 @@
 import React from 'react'
-import BlogPostCard from '../../components/blogCard'
+import BlogPostCard from 'components/blogCard'
 
 describe('BlogPostCard renders', () => {
   test('BlogPostCard renders', () => {

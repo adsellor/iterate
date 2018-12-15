@@ -3,9 +3,9 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import BlogPostCard from './blogCard'
+import BlogPostCard from 'components/blogCard'
 
-import '../styles/components/blog-posts.scss'
+import 'styles/components/blog-posts.scss'
 
 type MappedPostsProps = {
   data: Object,

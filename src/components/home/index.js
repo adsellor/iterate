@@ -1,6 +1,7 @@
 import React from 'react'
-import BlogPosts from './blogPosts'
-import Navbar from './navbar'
+
+import BlogPosts from 'components/blogPosts'
+import Navbar from 'components/navbar'
 
 const Home = () => (
   <>

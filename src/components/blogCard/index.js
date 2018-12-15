@@ -3,7 +3,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import '../styles/components/blog-card.scss'
+import 'styles/components/blog-card.scss'
 
 type BlogPostCardProps = {
   src: string,
