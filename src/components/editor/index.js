@@ -25,7 +25,7 @@ class Editor extends PureComponent<EditorProps, EditorState> {
   }
 
   _handleSubmit = () => {
-    const date = new Date().toDateString()
+    const date = new Date().toString()
     const storageRef = this.props.store.storage.ref()
     const fileRef = storageRef.child(`posts/${date}/index.md`)
     const content = new File([this.state.value], 'Post', {

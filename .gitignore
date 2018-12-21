@@ -11,5 +11,6 @@ fire/index.js
 
 # config file
 .env
+credentails.json
 
 src/fire/index.js
