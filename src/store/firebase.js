@@ -13,7 +13,7 @@ class FirebaseProvider extends PureComponent<*, ProviderState> {
     firebase: null,
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const app = import('firebase/app')
     const auth = import('firebase/auth')
     const db = import('firebase/database')
@@ -23,6 +23,8 @@ class FirebaseProvider extends PureComponent<*, ProviderState> {
       const firebase = getFirebase(values[0])
       this.setState({ firebase })
     })
+
+    await fetch('http://localhost:8080/posts')
   }
 
   render() {
