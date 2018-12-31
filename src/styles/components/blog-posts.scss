@@ -3,7 +3,7 @@
 
 .blog-posts-wrapper {
   margin: map-get($layout-margin, phone-only);
-  
+
   @include for-size(tablet-portrait-up) {
     margin: map-get($layout-margin, tablet-portrait-up);
   }
@@ -21,12 +21,12 @@
   .blog-posts-container {
     @include flex;
     flex-direction: column;
+    justify-content: flex-start;
 
     @include for-size(tablet-portrait-up) {
-      flex-direction: row; 
-      justify-content: space-between; 
+      flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
     }
   }
- }
+}

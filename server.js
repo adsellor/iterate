@@ -22,7 +22,10 @@ fetchPosts = async () => {
       file.download().then(data => {
         // TODO: put posts in the folders sorted by the Date,
         // e.g 10.10.2019-authorName/index.md
-        fs.writeFileSync(`${__dirname}/src/pages/post_number${index}.md`, data)
+        fs.writeFileSync(
+          `${__dirname}/content/posts/post_number${index}.md`,
+          data
+        )
       })
     })
   })

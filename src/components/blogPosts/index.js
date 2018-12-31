@@ -3,7 +3,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import BlogPostCard from 'components/blogCard'
+import BlogCard from 'components/blogCard'
 
 import 'styles/components/blog-posts.scss'
 
@@ -17,10 +17,9 @@ const MappedPosts = (props: MappedPostsProps) => {
     const { frontmatter, excerpt, id } = post.node
 
     return (
-      <BlogPostCard
-        onClick={() => {}}
+      <BlogCard
         key={id}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabcqwM0JRtjZFW5Kicp0LNcVHcYri6e4C9VB0Z11fbPU9S_-I"
+        src={`${frontmatter.image}`}
         title={frontmatter.title}
         author={frontmatter.author}
         excerpt={excerpt}
@@ -45,6 +44,7 @@ const BlogPosts = () => (
                 title
                 path
                 author
+                image
               }
             }
           }

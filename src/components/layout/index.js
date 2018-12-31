@@ -4,6 +4,8 @@ import * as React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Navbar from 'components/navbar'
+
 type LayoutProps = {
   children: React.Node,
 }
@@ -38,9 +40,10 @@ const Layout = ({ children }: LayoutProps) => (
             href="http://sstatic.net/stackoverflow/img/favicon.ico"
           />
         </Helmet>
+        <Navbar />
         <div
           style={{
-            margin: '0 auto',
+            margin: '5em',
             paddingTop: 0,
           }}
         >

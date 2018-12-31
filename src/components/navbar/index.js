@@ -12,7 +12,11 @@ import 'styles/components/navbar.scss'
 const Navbar = props => {
   return (
     <div className="navbar-wrapper">
-      <Link to="/"> Home </Link>
+      <div>
+        <Link to="/home"> Home </Link>
+        <Link to="/editor"> Editor </Link>
+        <Link to="/resources"> Resources </Link>
+      </div>
       {props.authState.user && (
         <UserBadge avatar={props.authState.user.photoURL} />
       )}

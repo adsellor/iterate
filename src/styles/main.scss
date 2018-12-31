@@ -1,4 +1,4 @@
-@import "./base/normalize";
+@import './base/normalize';
 
 // TODO: (600-900 blog posts)
 // TODO: vendor prefixes
@@ -9,4 +9,8 @@ p {
 
 img {
   margin: 0;
+}
+
+a {
+  text-shadow: none;
 }
